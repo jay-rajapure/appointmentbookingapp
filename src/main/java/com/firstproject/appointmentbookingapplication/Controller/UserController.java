@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-    @RequestMapping("/")
+
+    @RequestMapping("/profile")
     //@ResponseBody only needed for @controller
     public String greet(){
         return "hello user";
