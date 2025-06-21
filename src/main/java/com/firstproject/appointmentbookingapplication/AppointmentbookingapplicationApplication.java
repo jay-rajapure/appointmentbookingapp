@@ -14,6 +14,13 @@ import java.util.ArrayList;
 public class AppointmentbookingapplicationApplication {
 
 	public static void main(String[] args) {
+
+		try {
+			Class.forName("org.postgresql.Driver");
+			System.out.println(" PostgreSQL Driver Loaded");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Driver not found!");
+		}
 		ApplicationContext context = SpringApplication.run(AppointmentbookingapplicationApplication.class, args);
 		System.out.println(  "hello world ");
 
